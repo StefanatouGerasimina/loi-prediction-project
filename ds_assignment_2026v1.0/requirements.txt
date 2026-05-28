@@ -1,0 +1,7 @@
+polars
+pandas
+pydantic
+pyarrow
+psycopg2-binary
+sqlalchemy
+

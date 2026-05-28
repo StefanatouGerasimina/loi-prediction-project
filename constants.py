@@ -1,0 +1,91 @@
+# this file includes contast variables i need to use in order to prepare the input survey for loi prediction
+
+MOST_COMMON_CAT = 'cat_culture and arts'
+
+DIFFICULTY_WEIGHTS = {
+    'open_ended': 25621/3600,
+    'multiple_selection': 10872/3600,
+    'single_selection': 5190/3600,
+    'rating': 3600/3600,
+} # hardcoded from notebooks
+
+FEATURE_COLS = [
+    'qt_open_ended', 'qt_multiple_selection',
+    'qt_single_selection', 'qt_rating',
+    'num_answer_choices', 'avg_answer_choice_length',
+    'word_count', 'prompt_length', 'avg_word_length',
+    'pct_big_words', 'type_token_ratio', 'readability',
+    'has_question_mark', 'is_personal', 'has_analytical',
+    'has_negation', 'has_temporal', 'has_numbers',
+    'is_complex_prompt', 'starts_with_why', 'starts_with_how',
+    'starts_with_describe', 'starts_with_rate',
+    'open_ended_ratio', 'position_in_survey',
+    'survey_difficulty_score', 'num_questions_in_survey',
+    'cat_business', 'cat_culture and arts',
+    'cat_food and lifestyle', 'cat_health and wellness',
+    'cat_personal development', 'cat_society',
+    'cat_sports', 'cat_technology',
+] # after creation
+
+MANUAL_CAT_MAPPING = {
+    'indycar': 'sports', 'soccer': 'sports', 'nascar': 'sports',
+    'olympic games': 'sports', 'hockey': 'sports',
+    'mixed martial arts': 'sports', 'golf': 'sports',
+    'football': 'sports', 'boxing': 'sports',
+    'wrestling': 'sports', 'cricket': 'sports',
+    'motogp': 'sports', 'world rally championship': 'sports',
+    'baseball': 'sports', 'tennis': 'sports',
+    'formula 1': 'sports', 'sports': 'sports', 'olympics': 'sports',
+    'mindfulness': 'health and wellness',
+    'meditation': 'health and wellness',
+    'yoga': 'health and wellness', 'nutrition': 'health and wellness',
+    'fitness': 'health and wellness', 'sleep': 'health and wellness',
+    'health': 'health and wellness',
+    'innovation': 'technology', 'science': 'technology',
+    'technology': 'technology',
+    'self-improvement': 'personal development',
+    'psychology': 'personal development',
+    'motivation': 'personal development',
+    'creativity': 'personal development',
+    'problem-solving': 'personal development',
+    'time management': 'personal development',
+    'conflict resolution': 'personal development',
+    'critical thinking': 'personal development',
+    'emotional intelligence': 'personal development',
+    'communication': 'personal development',
+    'public speaking': 'personal development',
+    'decision making': 'personal development',
+    'productivity': 'personal development',
+    'goal setting': 'personal development',
+    'problem solving': 'personal development',
+    'parenting': 'personal development',
+    'fashion': 'culture and arts', 'architecture': 'culture and arts',
+    'crafts': 'culture and arts', 'film': 'culture and arts',
+    'design': 'culture and arts', 'television': 'culture and arts',
+    'art': 'culture and arts', 'theater': 'culture and arts',
+    'photography': 'culture and arts', 'culture': 'culture and arts',
+    'literature': 'culture and arts', 'history': 'culture and arts',
+    'comedy': 'culture and arts', 'dance': 'culture and arts',
+    'humor': 'culture and arts', 'music': 'culture and arts',
+    'entertainment': 'culture and arts', 'games': 'culture and arts',
+    'diy': 'culture and arts', 'philosophy': 'culture and arts',
+    'pets': 'food and lifestyle', 'gardening': 'food and lifestyle',
+    'food': 'food and lifestyle', 'baking': 'food and lifestyle',
+    'cooking': 'food and lifestyle', 'travel': 'food and lifestyle',
+    'mixology': 'food and lifestyle', 'lifestyle': 'food and lifestyle',
+    'religion': 'society', 'education': 'society',
+    'urban planning': 'society', 'politics': 'society',
+    'environment': 'society', 'conspiracy theories': 'society',
+    'true crime': 'society', 'sociology': 'society',
+    'relationships': 'society',
+    'finance': 'business', 'networking': 'business',
+    'teamwork': 'business', 'career': 'business',
+    'business': 'business', 'leadership': 'business',
+    'negotiation': 'business'
+}
+
+BROAD_CAT = [
+    'business', 'culture and arts', 'food and lifestyle',
+    'health and wellness', 'personal development',
+    'society', 'sports', 'technology'
+]
